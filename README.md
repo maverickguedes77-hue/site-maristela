@@ -1,9 +1,12 @@
 # Site — Maristela Rosa Guedes · Psicóloga · Terapia Sistêmica
 
 ## 🌐 NO AR
-**https://maverickguedes77-hue.github.io/site-maristela/**
+**https://maverickguedes77-hue.github.io/site-maristela/** *(URL atual)*
 
-Hospedado no GitHub Pages (grátis, HTTPS automático) — repositório: `maverickguedes77-hue/site-maristela` (publicado em 02/07/2026).
+⏳ **Transferência em andamento** para a conta da Maristela: foi enviado um e-mail do GitHub para **maristelarosapsi@gmail.com** — clicar em **"Accept transfer"** (vale por 1 dia). Depois do aceite:
+- Nova URL: **https://maristelarosapsi-lab.github.io/site-maristela/**
+- Se o site não abrir na nova URL em ~5 min, entrar (logada como maristelarosapsi-lab) em Settings → Pages → Branch `main` → Save.
+- Todo o SEO (canonical, sitemap, robots, Open Graph) já aponta para a nova URL.
 
 ## Estrutura (esta pasta É a pasta de edição do site)
 - `index.html` — o site inteiro (HTML único, CSS e JS embutidos)
@@ -36,9 +39,11 @@ Para testar localmente antes: `python -m http.server 8000` e abrir `http://local
 - Quiz 100% no navegador · LGPD no rodapé · Aviso ético CFP (CVV 188/SAMU 192) · Zero tags EDITAR
 - Conta GitHub da Maristela (**maristelarosapsi-lab**) convidada como **admin** do repositório — aceitar o convite no e-mail maristelarosapsi@gmail.com
 
-## ⚡ 2 ações imediatas
-1. **Ativar os leads (1 clique):** abrir o e-mail **maristelarosapsi@gmail.com** — há uma mensagem do FormSubmit pedindo confirmação ("Activate"). Depois disso, cada pessoa que baixar o e-book chega como e-mail com nome, e-mail e livro escolhido. (O primeiro lead de teste já foi enviado.)
-2. **Aceitar o convite do GitHub** (mesmo e-mail) para a conta maristelarosapsi-lab virar administradora do site.
+## ⚡ Ações imediatas (tudo no e-mail maristelarosapsi@gmail.com)
+1. **Aceitar a transferência do repositório** — e-mail do GitHub "Repository transfer": clicar em Accept. Isso tira o "maverickguedes77" da URL.
+2. **Ativar os leads (1 clique)** — e-mail do FormSubmit: clicar em "Activate". Depois disso, cada download de e-book chega como e-mail com nome, e-mail e livro escolhido (o lead de teste já foi enviado).
+3. **Clicar nos 3 botões de pagamento** do site uma vez cada, conferindo os valores (R$ 200 / 250 / 280) e se o boleto está desativado nos links (config no painel do Mercado Pago).
+4. **Google Search Console** (para aparecer rápido no Google): acessar https://search.google.com/search-console logada no Google dela → adicionar propriedade com a URL nova → verificar → enviar o sitemap `sitemap.xml`. O site já tem todo o SEO on-page pronto (palavras-chave, dados estruturados, sitemap, robots).
 
 ## 🌐 Domínio próprio (ex.: maristelaguedespsi.com.br)
 1. Registrar em https://registro.br (~R$40/ano). Sugestões: `maristelaguedespsi.com.br` · `maristelarosaguedes.com.br` · `maristelaguedes.psc.br`
