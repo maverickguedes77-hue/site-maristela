@@ -306,42 +306,6 @@ html.js .reveal.in{opacity:1;transform:none}
 .quiz-res .acoes{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
 .quiz-disclaimer{text-align:center;font-size:12.5px;color:var(--ink-soft);margin-top:18px}
 
-/* ============================ DEPOIMENTOS ============================ */
-.depo-aviso{
-  display:flex;gap:12px;align-items:flex-start;max-width:640px;
-  background:rgba(200,169,106,.13);border:1px dashed var(--gold);border-radius:var(--r-sm);
-  padding:14px 18px;font-size:13px;color:#6d5a30;margin-bottom:44px;line-height:1.6;
-}
-.carousel{position:relative;overflow:hidden}
-.carousel-track{display:flex;transition:transform .55s cubic-bezier(.4,0,.2,1)}
-.depo{flex:0 0 100%;padding:4px}
-.depo-card{
-  max-width:760px;margin:0 auto;background:var(--white);
-  border:1px solid var(--line);border-radius:var(--r-lg);
-  padding:38px 40px;box-shadow:var(--shadow-card);position:relative;
-}
-@media(max-width:600px){.depo-card{padding:26px 22px}}
-.depo-card .exemplo{
-  position:absolute;top:-11px;left:32px;
-  font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-  background:var(--gold);color:var(--forest);border-radius:6px;padding:3px 10px;
-}
-.antes-depois{display:grid;grid-template-columns:1fr auto 1fr;gap:18px;align-items:stretch;margin-bottom:24px}
-@media(max-width:600px){.antes-depois{grid-template-columns:1fr;gap:10px}}
-.ad-box{border-radius:var(--r-sm);padding:18px 20px;font-size:14.5px;line-height:1.6}
-.ad-box b{display:block;font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px}
-.ad-antes{background:#F7E9E2;color:#7C4A33}
-.ad-antes b{color:#B05B38}
-.ad-depois{background:#E8EFE7;color:#2C5043}
-.ad-depois b{color:#1E3A30}
-.ad-seta{align-self:center;color:var(--gold);font-size:22px}
-@media(max-width:600px){.ad-seta{transform:rotate(90deg);justify-self:center}}
-.depo-quem{font-size:13.5px;color:var(--ink-soft)}
-.depo-quem b{color:var(--ink);font-weight:600}
-.carousel-dots{display:flex;gap:8px;justify-content:center;margin-top:30px}
-.carousel-dots button{width:8px;height:8px;border-radius:50%;border:none;background:var(--line);cursor:pointer;transition:.2s;padding:0}
-.carousel-dots button.on{background:var(--clay);transform:scale(1.35)}
-
 /* ============================ DORES ============================ */
 .dores-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 @media(max-width:960px){.dores-grid{grid-template-columns:repeat(2,1fr)}}
@@ -608,10 +572,10 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
     <div class="hero-grid">
       <div class="reveal">
         <span class="eyebrow">Terapia Sistêmica · Curitiba &amp; Online</span>
-        <h1>Relacionamentos com brigas cansativas?
-          <span class="line2"><em class="hl">Saia desse ciclo</em> em 8 semanas.</span>
+        <h1>Relacionamentos presos em ciclos que se repetem?
+          <span class="line2"><em class="hl">Entenda a raiz</em> — não só o sintoma.</span>
         </h1>
-        <p class="hero-lead">Você não precisa carregar sozinho os conflitos, as dúvidas e os pesos emocionais que têm ocupado espaço demais na sua vida. O que se repete tem raiz — e tem saída.</p>
+        <p class="hero-lead">Você não precisa carregar sozinho os conflitos, as dúvidas e os pesos emocionais que têm ocupado espaço demais na sua vida. A terapia é um espaço de acolhimento, escuta e transformação — para compreender sua história e encontrar novos caminhos, com mais leveza, clareza e segurança emocional.</p>
 
         <ul class="recon" aria-label="Você se reconhece em alguma destas situações?">
           <li>
@@ -632,7 +596,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           </li>
         </ul>
 
-        <p class="ponte">"A raiz não é você. É um padrão que ninguém te ajudou a enxergar — até agora."</p>
+        <p class="ponte">"Existem momentos em que continuamos seguindo em frente por fora — mas, por dentro, estamos cansados de lidar com as mesmas situações que parecem se repetir."</p>
 
         <div class="hero-ctas">
           <a class="btn btn-clay" href="#quiz">Quero entender meu padrão</a>
@@ -686,6 +650,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
         <p style="color:#C9D2CB;margin-top:16px;max-width:460px">Dois guias práticos, escritos em linguagem direta — sem jargão, sem promessa vazia. Preencha, escolha e <strong style="color:var(--bone)">baixe agora em PDF</strong>: leitura de 15 minutos que pode mudar a forma como você enxerga suas relações.</p>
 
         <form class="ebook-form" id="ebookForm">
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
           <div class="field">
             <label for="ebNome">Seu nome</label>
             <input type="text" id="ebNome" name="nome" required autocomplete="name" placeholder="Como você gosta de ser chamado(a)">
@@ -709,6 +674,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           <p class="ed-title">Pronto, <em id="edNome"></em>!</p>
           <p class="ed-sub">Seu material está liberado — é só clicar para baixar:</p>
           <div class="ed-links" id="edLinks"></div>
+          <a class="btn btn-bone" href="#agendar" style="width:100%">Quero agendar minha primeira sessão</a>
           <a class="ed-whats" id="edWhats" href="#" target="_blank" rel="noopener">Prefere receber também pelo WhatsApp? Clique aqui.</a>
           <button type="button" class="ed-refazer" id="edVoltar">← voltar e escolher outro e-book</button>
         </div>
@@ -755,62 +721,8 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
   </div>
 </section>
 
-<!-- ============================ DEPOIMENTOS ============================ -->
-<section class="alt" id="depoimentos">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Antes → Depois</span>
-      <h2>O que muda quando o padrão <em class="hl">ganha nome</em></h2>
-    </div>
-
-    <div class="depo-aviso reveal" role="note">
-      <svg width="20" height="20" viewBox="0 0 20 20" style="flex:none;margin-top:2px" aria-hidden="true"><circle cx="10" cy="10" r="9" fill="none" stroke="#C8A96A" stroke-width="1.5"/><path d="M10 5.5v5.5" stroke="#C8A96A" stroke-width="1.6" stroke-linecap="round"/><circle cx="10" cy="14.2" r="1" fill="#C8A96A"/></svg>
-      <span><strong>Nota de transparência:</strong> os relatos abaixo são <strong>exemplos ilustrativos</strong> do tipo de mudança que a terapia sistêmica busca. Serão substituídos por depoimentos reais somente mediante autorização por escrito, conforme o Código de Ética Profissional do Psicólogo (CFP).</span>
-    </div>
-
-    <div class="carousel reveal" id="carousel">
-      <div class="carousel-track" id="carouselTrack">
-        <div class="depo">
-          <article class="depo-card">
-            <span class="exemplo">Exemplo ilustrativo</span>
-            <div class="antes-depois">
-              <div class="ad-box ad-antes"><b>Antes</b>"Toda conversa sobre dinheiro virava briga. A gente já começava o assunto na defensiva, esperando o pior um do outro."</div>
-              <span class="ad-seta" aria-hidden="true">→</span>
-              <div class="ad-box ad-depois"><b>Depois</b>"Quando entendemos que repetíamos a dinâmica de escassez das nossas famílias, a conversa mudou de tom. Hoje planejamos juntos."</div>
-            </div>
-            <p class="depo-quem"><b>Casal, 30–40 anos</b> · em terapia de casal</p>
-          </article>
-        </div>
-        <div class="depo">
-          <article class="depo-card">
-            <span class="exemplo">Exemplo ilustrativo</span>
-            <div class="antes-depois">
-              <div class="ad-box ad-antes"><b>Antes</b>"Eu me anulava para evitar conflito com a minha mãe — e depois explodia com quem não tinha nada a ver."</div>
-              <span class="ad-seta" aria-hidden="true">→</span>
-              <div class="ad-box ad-depois"><b>Depois</b>"Entendi de onde vinha o medo de desagradar. Consegui colocar limites sem culpa — e a relação com ela ficou mais leve, não pior."</div>
-            </div>
-            <p class="depo-quem"><b>Mulher, 35 anos</b> · terapia individual</p>
-          </article>
-        </div>
-        <div class="depo">
-          <article class="depo-card">
-            <span class="exemplo">Exemplo ilustrativo</span>
-            <div class="antes-depois">
-              <div class="ad-box ad-antes"><b>Antes</b>"Meu filho adolescente e eu só nos comunicávamos por monossílabos. Eu já tinha desistido de tentar."</div>
-              <span class="ad-seta" aria-hidden="true">→</span>
-              <div class="ad-box ad-depois"><b>Depois</b>"Descobri que o silêncio dele repetia o meu com o meu pai. Quando eu mudei o primeiro passo, a dança inteira mudou."</div>
-            </div>
-            <p class="depo-quem"><b>Pai, 48 anos</b> · terapia familiar</p>
-          </article>
-        </div>
-      </div>
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navegar entre exemplos"></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ DORES ============================ -->
-<section id="dores">
+<section class="alt" id="dores">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Você não está sozinho(a) nisso</span>
@@ -855,7 +767,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
 </section>
 
 <!-- ============================ COMO FUNCIONA ============================ -->
-<section class="alt" id="como-funciona">
+<section id="como-funciona">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Como funciona o atendimento</span>
@@ -885,7 +797,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
       </article>
       <article class="passo-card reveal">
         <h3>Confirme com o pagamento</h3>
-        <p>Pagamento seguro via Mercado Pago (Pix, cartão ou boleto). Sua vaga fica reservada na hora.</p>
+        <p>Pagamento seguro via Mercado Pago — Pix ou cartão em até 3x. Sua vaga fica reservada na hora.</p>
         <span class="tempo">~3 minutos</span>
       </article>
       <article class="passo-card reveal">
@@ -937,7 +849,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
         <div class="grafico" role="img" aria-label="Gráfico decorativo de barras decrescentes representando a intensidade de um padrão diminuindo ao longo do processo terapêutico">
           <div class="g-title">Intensidade do padrão ao longo do processo</div>
           <div class="g-bars" id="gBars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-          <div class="g-leg"><span>Início</span><span>8 semanas</span></div>
+          <div class="g-leg"><span>Início</span><span>Ao longo do processo</span></div>
           <p class="g-cap">Representação conceitual — cada processo tem seu próprio ritmo.</p>
         </div>
         <div class="beneficios">
@@ -1015,7 +927,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           </li>
           <li>
             <svg width="17" height="17" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="#C2693F" stroke-width="1.4"/><path d="M5.5 9.2l2.3 2.3 4.7-4.8" fill="none" stroke="#C2693F" stroke-width="1.6" stroke-linecap="round"/></svg>
-            Recibo para reembolso em planos de saúde
+            Sigilo absoluto, garantido pelo Código de Ética (CFP)
           </li>
           <li>
             <svg width="17" height="17" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="#C2693F" stroke-width="1.4"/><path d="M5.5 9.2l2.3 2.3 4.7-4.8" fill="none" stroke="#C2693F" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -1055,7 +967,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2693F" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19"/></svg>
           2 · Confirme o pagamento
         </h3>
-        <p class="desc">Depois de escolher o horário ao lado, garanta sua vaga com o pagamento seguro — Pix, cartão ou boleto. Use o mesmo nome do agendamento.</p>
+        <p class="desc">Depois de escolher o horário ao lado, garanta sua vaga com o pagamento seguro — Pix ou cartão em até 3x. Use o mesmo nome do agendamento.</p>
         <div class="mp-box">
           <span class="serif">Sessão · R$ 200</span>
           <a class="btn btn-clay" href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/?source=link&preference-id=11887111-f8e98343-6be1-4b16-8864-31aaa1f2c697&router-request-id=56972b37-14e6-48b1-b3f3-723e0c8c0146" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
@@ -1111,10 +1023,6 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
       <details class="faq">
         <summary>E se eu precisar remarcar uma sessão?<span class="ico">+</span></summary>
         <p class="resp">Imprevistos acontecem. Com pelo menos 24 horas de antecedência, a remarcação não tem custo — basta avisar pelo WhatsApp e escolher novo horário. Cancelamentos em cima da hora são conversados caso a caso, com bom senso dos dois lados.</p>
-      </details>
-      <details class="faq">
-        <summary>Recebo recibo? Consigo reembolso do plano de saúde?<span class="ico">+</span></summary>
-        <p class="resp">Sim. Toda sessão gera recibo com CRP para você solicitar reembolso, caso seu plano de saúde ofereça essa cobertura. Vale consultar as regras do seu plano — e o recibo também serve para declaração no Imposto de Renda.</p>
       </details>
     </div>
   </div>
@@ -1241,6 +1149,21 @@ document.getElementById('ebookForm').addEventListener('submit', e => {
   ).join('');
   const msg = `Olá, Maristela! Baixei o e-book pelo site e quero receber também por aqui.\n\n📖 ${chaves.map(k => LIVROS[k].t).join(' + ')}\n🙋 Nome: ${nome}\n✉️ E-mail: ${email}`;
   document.getElementById('edWhats').href = `https://wa.me/5541997423840?text=${encodeURIComponent(msg)}`;
+  // Lead vai para o e-mail da Maristela via FormSubmit (grátis, sem conta).
+  // 1º envio dispara um e-mail de ativação para maristelarosapsi@gmail.com — ativar uma única vez.
+  fetch('https://formsubmit.co/ajax/maristelarosapsi@gmail.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      _subject: 'Novo lead do site — e-book gratuito',
+      _template: 'table',
+      _captcha: 'false',
+      nome: nome,
+      email: email,
+      ebook: chaves.map(k => LIVROS[k].t).join(' + '),
+      origem: 'Formulário de e-book do site'
+    })
+  }).catch(() => {});
   document.getElementById('ebookForm').hidden = true;
   document.getElementById('ebookDone').hidden = false;
 });
@@ -1291,7 +1214,7 @@ const PERGUNTAS = [
 const RESULTADOS = {
   ansiedade: {
     nome: 'Ansiedade <em>Relacional</em>',
-    desc: 'Você vive o vínculo como algo que pode se romper a qualquer descuido. Por isso monitora, antecipa e tenta resolver tudo imediatamente — o que exausta você e, às vezes, sufoca o outro. Esse padrão quase sempre nasce em histórias onde o amor parecia instável ou condicional.',
+    desc: 'Você vive o vínculo como algo que pode se romper a qualquer descuido. Por isso monitora, antecipa e tenta resolver tudo imediatamente — o que esgota você e, às vezes, sufoca o outro. Esse padrão quase sempre nasce em histórias onde o amor parecia instável ou condicional.',
     passo: 'Perceba que a urgência que você sente não é "carência" — é um alarme antigo disparando no presente. O primeiro movimento é aprender a reconhecer o alarme sem obedecê-lo na hora.'
   },
   evitacao: {
@@ -1360,31 +1283,6 @@ function renderResultado(){
   });
 }
 renderPergunta();
-
-/* ---------- Carrossel de depoimentos ---------- */
-const track = document.getElementById('carouselTrack');
-const slides = track.children.length;
-const dotsBox = document.getElementById('carouselDots');
-let slideIdx = 0, timer;
-
-for (let i = 0; i < slides; i++) {
-  const b = document.createElement('button');
-  b.setAttribute('aria-label', `Exemplo ${i+1}`);
-  b.addEventListener('click', () => { irPara(i); reiniciar(); });
-  dotsBox.appendChild(b);
-}
-function irPara(i){
-  slideIdx = i;
-  track.style.transform = `translateX(-${i*100}%)`;
-  [...dotsBox.children].forEach((d,j) => d.classList.toggle('on', j===i));
-}
-function reiniciar(){
-  clearInterval(timer);
-  timer = setInterval(() => irPara((slideIdx+1)%slides), 6000);
-}
-document.getElementById('carousel').addEventListener('mouseenter', () => clearInterval(timer));
-document.getElementById('carousel').addEventListener('mouseleave', reiniciar);
-irPara(0); reiniciar();
 
 /* ---------- Ano do rodapé ---------- */
 document.getElementById('ano').textContent = new Date().getFullYear();
