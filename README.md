@@ -1,12 +1,9 @@
 # Site — Maristela Rosa Guedes · Psicóloga · Terapia Sistêmica
 
 ## 🌐 NO AR
-**https://maverickguedes77-hue.github.io/site-maristela/** *(URL atual)*
+**https://maristelarosapsi-lab.github.io/site-maristela/**
 
-⏳ **Transferência em andamento** para a conta da Maristela: foi enviado um e-mail do GitHub para **maristelarosapsi@gmail.com** — clicar em **"Accept transfer"** (vale por 1 dia). Depois do aceite:
-- Nova URL: **https://maristelarosapsi-lab.github.io/site-maristela/**
-- Se o site não abrir na nova URL em ~5 min, entrar (logada como maristelarosapsi-lab) em Settings → Pages → Branch `main` → Save.
-- Todo o SEO (canonical, sitemap, robots, Open Graph) já aponta para a nova URL.
+Repositório: `maristelarosapsi-lab/site-maristela` (conta da Maristela — transferência concluída em 02/07/2026). Todo o SEO (canonical, sitemap, robots, Open Graph) aponta para esta URL. A URL antiga (maverickguedes77-hue) deixou de existir — atualize favoritos e o link da bio do Instagram/TikTok.
 
 ## Estrutura (esta pasta É a pasta de edição do site)
 - `index.html` — o site inteiro (HTML único, CSS e JS embutidos)
