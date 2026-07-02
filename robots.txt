@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /council/
+Disallow: /psi/
+
+Sitemap: https://maristelarosapsi-lab.github.io/site-maristela/sitemap.xml

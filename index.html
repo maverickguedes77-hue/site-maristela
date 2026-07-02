@@ -9,6 +9,40 @@
 <meta property="og:description" content="Brigas que sempre terminam no mesmo lugar? O sofrimento relacional raramente é individual — é um padrão. E padrão compreendido pode ser reescrito.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
+<meta property="og:url" content="https://maristelarosapsi-lab.github.io/site-maristela/">
+<meta property="og:image" content="https://maristelarosapsi-lab.github.io/site-maristela/fotos/maristela.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="keywords" content="psicóloga Curitiba, terapia de casal Curitiba, terapia familiar Curitiba, psicóloga online, terapia sistêmica, psicoterapia individual, psicóloga para adolescentes, terapia para casais, conflitos familiares, relacionamento, psicóloga CRP, Maristela Rosa Guedes">
+<meta name="geo.region" content="BR-PR">
+<meta name="geo.placename" content="Curitiba">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://maristelarosapsi-lab.github.io/site-maristela/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://maristelarosapsi-lab.github.io/site-maristela/",
+  "name": "Maristela Rosa Guedes — Psicóloga · Terapia Sistêmica",
+  "description": "Terapia Sistêmica para adolescentes, adultos, casais e famílias. Atendimento presencial em Curitiba/PR e online para todo o Brasil. CRP 08/42074.",
+  "url": "https://maristelarosapsi-lab.github.io/site-maristela/",
+  "image": "https://maristelarosapsi-lab.github.io/site-maristela/fotos/maristela.jpg",
+  "telephone": "+55-41-99742-3840",
+  "email": "maristelarosapsi@gmail.com",
+  "priceRange": "R$200 - R$280",
+  "address": { "@type": "PostalAddress", "addressLocality": "Curitiba", "addressRegion": "PR", "addressCountry": "BR" },
+  "areaServed": ["Curitiba", "Brasil (atendimento online)"],
+  "founder": { "@type": "Person", "name": "Maristela Rosa Guedes", "jobTitle": "Psicóloga", "identifier": "CRP 08/42074" },
+  "sameAs": [
+    "https://instagram.com/maristelaguedes.psi",
+    "https://www.tiktok.com/@maristela.guedespsi"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "name": "Psicoterapia individual — sessão de 50 minutos", "price": "200", "priceCurrency": "BRL" },
+    { "@type": "Offer", "name": "Terapia de casal — sessão de 50 minutos", "price": "250", "priceCurrency": "BRL" },
+    { "@type": "Offer", "name": "Terapia familiar — sessão de 50 minutos", "price": "280", "priceCurrency": "BRL" }
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -439,8 +473,15 @@ html.js .g-bars.animate i{animation:crescer .9s ease both}
 @media(max-width:600px){.inv-card{padding:30px 24px}}
 .inv-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--clay),var(--gold))}
 .inv-card .mod{font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft)}
-.preco{font-family:'Fraunces',serif;font-weight:300;font-size:54px;color:var(--forest);line-height:1;margin:14px 0 4px}
-.preco small{font-size:19px;font-weight:400;color:var(--ink-soft)}
+.precos3{margin:16px 0 4px;display:grid}
+.p-row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 0;border-bottom:1px solid var(--line)}
+.p-row:last-child{border-bottom:none}
+.p-row .p-nome{font-size:14.5px;font-weight:600;color:var(--ink)}
+.p-row .p-desc{display:block;font-size:12px;font-weight:400;color:var(--ink-soft);margin-top:2px}
+.p-row b{font-family:'Fraunces',serif;font-weight:300;font-size:30px;color:var(--forest);white-space:nowrap}
+.p-row b small{font-size:13px;font-family:'Inter',sans-serif;color:var(--ink-soft);font-weight:400}
+.mp-btns{display:grid;gap:10px;width:100%}
+.mp-btns .btn{width:100%}
 .inv-inclui{list-style:none;margin:26px 0 30px;display:grid;gap:12px}
 .inv-inclui li{display:flex;gap:12px;font-size:14.5px;color:var(--ink-soft);align-items:flex-start}
 .inv-inclui li svg{flex:none;margin-top:4px}
@@ -674,7 +715,8 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           <p class="ed-title">Pronto, <em id="edNome"></em>!</p>
           <p class="ed-sub">Seu material está liberado — é só clicar para baixar:</p>
           <div class="ed-links" id="edLinks"></div>
-          <a class="btn btn-bone" href="#agendar" style="width:100%">Quero agendar minha primeira sessão</a>
+          <p class="ed-sub" style="text-align:center;margin-top:4px">Pronto para dar o próximo passo?</p>
+          <a class="btn btn-bone" href="#agendar" style="width:100%">Quero agendar minha primeira sessão →</a>
           <a class="ed-whats" id="edWhats" href="#" target="_blank" rel="noopener">Prefere receber também pelo WhatsApp? Clique aqui.</a>
           <button type="button" class="ed-refazer" id="edVoltar">← voltar e escolher outro e-book</button>
         </div>
@@ -797,7 +839,7 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
       </article>
       <article class="passo-card reveal">
         <h3>Confirme com o pagamento</h3>
-        <p>Pagamento seguro via Mercado Pago — Pix ou cartão em até 3x. Sua vaga fica reservada na hora.</p>
+        <p>Pagamento seguro via Mercado Pago — Pix ou cartão. Sua vaga fica reservada na hora.</p>
         <span class="tempo">~3 minutos</span>
       </article>
       <article class="passo-card reveal">
@@ -914,8 +956,12 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
         <p class="comparacao">"O ciclo também cobra — em noites mal dormidas, decisões adiadas e relações que se desgastam. Só que sem prazo para acabar."</p>
       </div>
       <div class="inv-card reveal">
-        <span class="mod">Sessão individual · casal · família</span>
-        <div class="preco">R$ 200<small>/sessão</small></div>
+        <span class="mod">Valores por sessão · 50 minutos</span>
+        <div class="precos3">
+          <div class="p-row"><span class="p-nome">Individual<span class="p-desc">adolescentes e adultos</span></span><b>R$ 200<small>/sessão</small></b></div>
+          <div class="p-row"><span class="p-nome">Casal<span class="p-desc">terapia de casal</span></span><b>R$ 250<small>/sessão</small></b></div>
+          <div class="p-row"><span class="p-nome">Família<span class="p-desc">terapia familiar</span></span><b>R$ 280<small>/sessão</small></b></div>
+        </div>
         <ul class="inv-inclui">
           <li>
             <svg width="17" height="17" viewBox="0 0 18 18" aria-hidden="true"><circle cx="9" cy="9" r="8" fill="none" stroke="#C2693F" stroke-width="1.4"/><path d="M5.5 9.2l2.3 2.3 4.7-4.8" fill="none" stroke="#C2693F" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -967,11 +1013,15 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2693F" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19"/></svg>
           2 · Confirme o pagamento
         </h3>
-        <p class="desc">Depois de escolher o horário ao lado, garanta sua vaga com o pagamento seguro — Pix ou cartão em até 3x. Use o mesmo nome do agendamento.</p>
+        <p class="desc">Depois de escolher o horário ao lado, garanta sua vaga com o pagamento da sua modalidade — Pix ou cartão. Use o mesmo nome do agendamento.</p>
         <div class="mp-box">
-          <span class="serif">Sessão · R$ 200</span>
-          <a class="btn btn-clay" href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/?source=link&preference-id=11887111-f8e98343-6be1-4b16-8864-31aaa1f2c697&router-request-id=56972b37-14e6-48b1-b3f3-723e0c8c0146" target="_blank" rel="noopener">Pagar com Mercado Pago</a>
-          <p style="font-size:12.5px;color:var(--ink-soft)">Ambiente oficial do Mercado Pago, com criptografia de ponta a ponta.</p>
+          <span class="serif">Escolha a modalidade</span>
+          <div class="mp-btns">
+            <a class="btn btn-clay" href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/?source=link&preference-id=11887111-f8e98343-6be1-4b16-8864-31aaa1f2c697" target="_blank" rel="noopener">Individual · R$ 200</a>
+            <a class="btn btn-clay" href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/?source=link&preference-id=11887111-7f9dd9e9-a2d7-4331-a3e3-77f8ae41c82e" target="_blank" rel="noopener">Casal · R$ 250</a>
+            <a class="btn btn-clay" href="https://www.mercadopago.com.br/checkout/v1/payment/redirect/?source=link&preference-id=11887111-92a965cc-e3e8-4d73-b71c-37fc53e3cf21" target="_blank" rel="noopener">Família · R$ 280</a>
+          </div>
+          <p style="font-size:12.5px;color:var(--ink-soft)">Pagamento no ambiente oficial do Mercado Pago, com criptografia de ponta a ponta.</p>
         </div>
         <div class="modalidades">
           <div class="moda"><b>Online</b>Google Meet, de onde você estiver. Mesmo sigilo, mesma presença.</div>
