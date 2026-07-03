@@ -548,6 +548,9 @@ html.js .vagas .pulse::after{
 @media(max-width:520px){.modalidades{grid-template-columns:1fr}}
 .moda{background:var(--white);border:1px solid var(--line);border-radius:var(--r-sm);padding:16px 18px;font-size:13.5px;color:var(--ink-soft)}
 .moda b{display:block;color:var(--ink);font-size:14.5px;margin-bottom:3px;font-weight:600}
+.mapa-box{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin-top:14px;background:var(--bone2)}
+.mapa-box iframe{width:100%;height:200px;border:0;display:block;filter:grayscale(.15) contrast(1.02)}
+.mapa-link{display:block;text-align:center;font-size:13px;padding:10px;color:var(--clay);font-weight:600;background:var(--white)}
 .agenda-whats{margin-top:26px;text-align:center;font-size:14px;color:var(--ink-soft)}
 
 /* ============================ FAQ ============================ */
@@ -1072,6 +1075,10 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
         <div class="modalidades">
           <div class="moda"><b>Online</b>Google Meet, de onde você estiver. Mesmo sigilo, mesma presença.</div>
           <div class="moda"><b>Presencial</b>Clínica FelizMente: Av. República Argentina, 2403, sala 54, 5º andar, Água Verde, Curitiba/PR.</div>
+        </div>
+        <div class="mapa-box">
+          <iframe src="https://www.google.com/maps/embed?origin=mfe&pb=!1m2!2m1!1sAv.+Rep%C3%BAblica+Argentina%2C+2403+-+%C3%81gua+Verde%2C+Curitiba+-+PR%2C+80610-260" title="Mapa: Clínica FelizMente, consultório da Maristela Rosa Guedes" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="mapa-link" href="https://www.google.com/maps/search/?api=1&query=Av.+Rep%C3%BAblica+Argentina,+2403+-+%C3%81gua+Verde,+Curitiba+-+PR,+80610-260" target="_blank" rel="noopener">Abrir no Google Maps →</a>
         </div>
       </div>
     </div>
