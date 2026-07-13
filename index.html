@@ -543,6 +543,25 @@ html.js .vagas .pulse::after{
 .calendly-load .cl-sub{font-size:13.5px;color:var(--ink-soft);max-width:270px;line-height:1.5}
 .calendly-load .cl-btn{margin-top:6px;display:inline-block;background:var(--clay);color:#fff;padding:12px 24px;border-radius:999px;font-size:14.5px;font-weight:500;transition:background .2s}
 .calendly-load:hover .cl-btn,.calendly-load:focus-visible .cl-btn{background:var(--forest)}
+
+/* ---------- Agendamento rápido em português (mobile-first) ---------- */
+.agq{display:flex;flex-direction:column;gap:14px;background:var(--bone2);border-radius:var(--r-md);padding:22px 20px}
+.agq-lbl{font-size:11.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft)}
+.agq .chips{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.agq .chips.c4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:560px){.agq .chips.c4{grid-template-columns:repeat(2,1fr)}}
+.agq .chip{min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;background:var(--white);border:1.5px solid var(--line);border-radius:12px;padding:9px 6px;font-family:'Inter',sans-serif;font-size:14px;font-weight:600;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+.agq .chip small{font-weight:500;font-size:11.5px;color:var(--ink-soft)}
+.agq .chip[aria-pressed="true"]{border-color:var(--clay);background:rgba(194,105,63,.09);color:var(--clay)}
+.agq .chip[aria-pressed="true"] small{color:var(--clay)}
+.agq-send{width:100%;font-size:15.5px}
+.agq-note{font-size:12.5px;color:var(--ink-soft);text-align:center;margin-top:-2px}
+.agq-ou{display:flex;align-items:center;gap:12px;color:var(--ink-soft);font-size:13px;margin:16px 0 12px}
+.agq-ou::before,.agq-ou::after{content:"";flex:1;height:1px;background:var(--line)}
+.calendly-box.compact{min-height:0;flex:none}
+.calendly-box.compact .calendly-load{min-height:0;padding:20px 22px}
+.calendly-box.compact .calendly-load svg,.calendly-box.compact .cl-title{display:none}
+.calendly-box.compact .cl-sub{max-width:none}
 .mp-box{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;background:var(--bone2);border-radius:var(--r-md);padding:30px 26px;text-align:center}
 .mp-box .serif{font-size:19px;color:var(--forest)}
 .aceite-box{display:flex;align-items:flex-start;gap:11px;text-align:left;background:var(--white);border:1px solid var(--line);border-radius:var(--r-sm);padding:14px 16px;transition:border-color .25s,box-shadow .25s}
@@ -1056,14 +1075,35 @@ footer{background:var(--ink);color:#B9C4BC;padding:72px 0 0}
       <div class="agenda-card reveal">
         <h3>
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C2693F" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
-          1 · Escolha data e horário
+          1 · Agende em três toques
         </h3>
-        <p class="desc">Agenda em tempo real: o horário escolhido já fica pré-reservado para você.</p>
-        <div class="calendly-box" id="calendlyBox">
-          <button type="button" class="calendly-load" id="calendlyLoad" aria-label="Ver horários disponíveis na agenda">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
-            <span class="cl-title">Ver horários disponíveis</span>
-            <span class="cl-sub">Agenda em tempo real. Toque para carregar o calendário e escolher dia e horário.</span>
+        <p class="desc">Escolha abaixo e envie: você recebe os horários disponíveis direto no seu WhatsApp, em português.</p>
+        <div class="agq" id="agq">
+          <span class="agq-lbl">Tipo de sessão</span>
+          <div class="chips" data-g="tipo" role="group" aria-label="Tipo de sessão">
+            <button type="button" class="chip" aria-pressed="true" data-v="Individual">Individual<small>R$ 200</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Casal">Casal<small>R$ 250</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Família">Família<small>R$ 280</small></button>
+          </div>
+          <span class="agq-lbl">Formato</span>
+          <div class="chips" data-g="formato" role="group" aria-label="Formato do atendimento" style="grid-template-columns:repeat(2,1fr)">
+            <button type="button" class="chip" aria-pressed="true" data-v="Online">Online<small>videochamada</small></button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Presencial (Água Verde)">Presencial<small>Água Verde</small></button>
+          </div>
+          <span class="agq-lbl">Melhor período</span>
+          <div class="chips c4" data-g="periodo" role="group" aria-label="Melhor período">
+            <button type="button" class="chip" aria-pressed="false" data-v="Manhã">Manhã</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Tarde">Tarde</button>
+            <button type="button" class="chip" aria-pressed="false" data-v="Noite">Noite</button>
+            <button type="button" class="chip" aria-pressed="true" data-v="Qualquer horário">Tanto faz</button>
+          </div>
+          <button type="button" class="btn btn-clay agq-send" id="agqSend">Receber horários no WhatsApp</button>
+          <p class="agq-note">Sem compromisso: você confirma o horário e o pagamento depois.</p>
+        </div>
+        <div class="agq-ou">ou, se preferir escolher no calendário</div>
+        <div class="calendly-box compact" id="calendlyBox">
+          <button type="button" class="calendly-load" id="calendlyLoad" aria-label="Abrir o calendário de horários">
+            <span class="cl-sub">Veja a agenda em tempo real e escolha dia e horário.</span>
             <span class="cl-btn">Abrir agenda →</span>
           </button>
         </div>
@@ -1263,6 +1303,28 @@ if (calendlyLoad) {
   calendlyLoad.addEventListener('click', () => {
     document.getElementById('calendlyBox').innerHTML =
       '<iframe src="https://calendly.com/maristelarosapsi/sessao-psicoterapia?hide_gdpr_banner=1&background_color=EDE7DB&text_color=22302B&primary_color=C2693F" title="Agenda de horários no Calendly"></iframe>';
+  });
+}
+
+/* ---------- Agendamento rápido em português: monta o pedido e abre o WhatsApp ---------- */
+const agq = document.getElementById('agq');
+if (agq) {
+  agq.querySelectorAll('.chips').forEach(g => {
+    g.addEventListener('click', e => {
+      const b = e.target.closest('.chip');
+      if (!b) return;
+      g.querySelectorAll('.chip').forEach(c => c.setAttribute('aria-pressed', 'false'));
+      b.setAttribute('aria-pressed', 'true');
+    });
+  });
+  document.getElementById('agqSend').addEventListener('click', () => {
+    const v = k => agq.querySelector('[data-g="' + k + '"] .chip[aria-pressed="true"]')?.dataset.v || '';
+    const msg = 'Olá, Maristela! Quero agendar uma sessão.\n' +
+      '• Tipo: ' + v('tipo') + '\n' +
+      '• Formato: ' + v('formato') + '\n' +
+      '• Melhor período: ' + v('periodo') + '\n\n' +
+      'Pode me enviar os horários disponíveis?';
+    window.open('https://wa.me/5541997423840?text=' + encodeURIComponent(msg), '_blank', 'noopener');
   });
 }
 
